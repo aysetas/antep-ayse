@@ -14,4 +14,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('hakkimda', [HomeController::class, 'showView']);
+Route::get('hakkimda', [HomeController::class, 'showUsers']);
+Route::get('urunler', [HomeController::class, 'showProducts']);
+Route::get('userProduct', [HomeController::class, 'showUSerProducts']);

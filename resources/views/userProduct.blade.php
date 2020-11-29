@@ -25,16 +25,18 @@ tr:nth-child(even) {
 <table>
     <tr>
         <th>Name</th>
-        <th>Email</th>
-        <th>Password</th>
+        <th>Product Name</th>
+        <th>Price</th>
       </tr>
+    @foreach($user_produsts as $user)
   <tr>
-@foreach($users as $user)
-  <th>{{$user->name}}</th>
-    <th>{{$user->email}}</th>
-    <th>{{$user->password}}</th>
+    <th>{{$user->name}}</th>
+    <th>{{$user->pname}}</th>
+    <th>{{$user->price}}</th>
+
+
   </tr>
-@endforeach
+  @endforeach
 </table>
 
 </body>
