@@ -21,7 +21,7 @@
                         <div class="blog__item__text">
                             <ul>
                             <li><i class="fa fa-calendar-o"></i>{{$blog->created_at->diffForHumans()}}</li>
-                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            <li><i class="fa fa-comment-o"></i> {{$blog->comment}}</li>
                             </ul>
                             <h5><a href="#">{{$blog->title}}</a></h5>
                             <p>{{$blog->content}}</p>
