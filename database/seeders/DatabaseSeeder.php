@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this ->call(BannerSeeder::class);
         $this ->call(CategorySliderSeeder::class);
         $this ->call(BlogSeeder::class);
+        $this ->call(LaterSeeder::class);
     }
 }
