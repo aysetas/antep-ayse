@@ -36,7 +36,7 @@ Route::get('show-sliders', [SliderController::class, 'index'])->name('slider.ind
 Route::get('delete-slider/{id}', [SliderController::class, 'destroy'])->name('delete.slider')->where(array('id' =>'[0-9]+'));
 
 /**
- * Category İşlemleri
+ * Ödev Kısmı
  */
 Route::get('/index', [HomeController::class, 'showCategory'])->name('product.index');
 Route::get('/banner', [HomeController::class,'bannerView'])->name('product.banner');

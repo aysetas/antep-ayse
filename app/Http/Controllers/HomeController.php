@@ -46,6 +46,10 @@ class HomeController extends Controller
         return view('product.index' ,compact('products','categories'));
 
     }
+    public function categorySliderView(){
+        $categorySlider=categorySliders::all();
+        return view('product.category-slider' ,compact('categorySlider'));
+    }
 
     public function bannerView(){
         $banners=Banners::all();
