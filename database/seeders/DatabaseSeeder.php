@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         $this ->call(CategorySliderSeeder::class);
         $this ->call(BlogSeeder::class);
         $this ->call(LaterSeeder::class);
+        $this ->call(userSeeder::class);
     }
 }

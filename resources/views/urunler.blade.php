@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Laravel Pagination Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    </head>
 <body>
 
 
@@ -26,19 +14,23 @@ tr:nth-child(even) {
     <tr>
         <th>Name</th>
         <th>Price</th>
-        <th>Photo</th>
-        <th>Description</th>
+        <th>Ekleyen</th>
+
       </tr>
     @foreach($products as $product)
   <tr>
     <th>{{$product->name}}</th>
     <th>{{$product->price}}</th>
-    <th>{{$product->photo}}</th>
-    <th>{{$product->description}}</th>
+    <th>{{$product->Users[0]->name}}</th>
+
 
   </tr>
   @endforeach
 </table>
+<div class="d-flex justfy-content-center">
+    {{$products->Links()}}
+
+</div>
 
 </body>
 </html>

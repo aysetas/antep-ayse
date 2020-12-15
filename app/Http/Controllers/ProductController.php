@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Exports\ProductExport;
 use App\Models\Product;
+use App\Models\Products;
+use App\Models\Users;
 
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
@@ -16,9 +18,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products=Product::all();
+       // $products=Product::all();
 
-        return view('product.index' ,compact('products'));
+       // return view('product.index' ,compact('products'));
+       $products=Products::with(['Users'])->paginate(2);
+       return view('urunler' ,compact('products'));
+
+
 
     }
 

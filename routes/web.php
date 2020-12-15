@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\smsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +28,7 @@ Route::get('save-product', [ProductController::class, 'store'])->name('product.s
 Route::get('export-products', [ProductController::class, 'export'])->name('product.export');
 
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
-
+Route::get('/urunler', [ProductController::class, 'index'])->name('urunler');
 
 
 /**
@@ -44,3 +46,9 @@ Route::get('/categorySlider', [HomeController::class,'categorySliderView'])->nam
 Route::get('/laters', [HomeController::class,'laterView'])->name('product.laters');
 Route::get('/blogs', [HomeController::class,'blogView'])->name('product.blog');
 
+/**
+ * Ödev Kısmı2
+ */
+Route::get('/login', [smsController::class,'index'])->name('auth.login');
+Route::get('/forgotPassword', [smsController::class,'passwordView'])->name('auth.forgotPassword');
+Route::post('/forgotPassword/send', [smsController::class,'sendSms'])->name('auth.forgotPassword.send');
