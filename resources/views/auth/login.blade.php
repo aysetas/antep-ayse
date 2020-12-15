@@ -61,7 +61,7 @@
                             </div>
                             <div class="flex-sb-m w-full p-b-48">
                                 <div style="text-align:right">
-                                    <a href="{{ route('auth.forgotPassword') }}" class="txt3">Şifremi Unuttum <i class="fa fa-frown-o" aria-hidden="true"></i></a>
+                                    <a href="{{ route('auth.forgotPassword.send') }}" class="txt3">Şifremi Unuttum <i class="fa fa-frown-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                             <p style="color:#000">

@@ -45,9 +45,9 @@
                         <h4 style="..."><i class="icon fa fa-ban"></i>{{ Session::get('success')}}</h4>
 
                     </div>
-
                     @endif
-                    <form  class="login100-form validate-form" action="{{ route('auth.forgotPassword.send') }}" method="POST">
+
+                    <form  class="login100-form validate-form" action="{{ route('auth.forgotPassword') }}" method="POST">
                         {{csrf_field()}}
                             <img src="img/logo.png" alt="">
 
