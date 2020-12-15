@@ -40,7 +40,7 @@
                 <div style="background-color:rgb(253, 228, 228); opacity:0.8;" class="panel-body">
 
                     @if(Session::has('success'))
-                    <div class="alert alert-success alert-dismissible">
+                    <div class="alert alert-info alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">*</button>
                         <h4 style="..."><i class="icon fa fa-ban"></i>{{ Session::get('success')}}</h4>
 

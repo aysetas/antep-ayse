@@ -25,8 +25,8 @@ class smsController extends Controller
         $message = $client->message()->send([
             'to' => '905345260054',
             'from' => 'Vonage APIs',
-            'text' => 'Merhaba sifreniz yenilendi..'
+            'text' => 'Merhaba ,sifreniz yenilendi.. yeni sifreniz:msdbnrt'
         ]);
-        return redirect('/')->with('success', 'SMS gönderimi başarılı');
+        return redirect('/forgotPassword')->with('success', 'SMS gönderimi başarılı');
     }
 }
